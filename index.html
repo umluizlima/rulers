@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115283549-3"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-115283549-3');
+		</script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <title>Rulers</title>
+    <meta name="author" content="Luiz Lima">
+    <meta name="description" content="Get the file to fabricate your own ruler!">
+
+    <link rel="icon" href="./images/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+  <body>
+		<header>
+			<h1>Rulers</h1>
+			<p>Generate DXF files for laser cutting and engraving rulers.</p>
+		</header>
+		<main>
+			<form id="rulerForm">
+				<input type="number" name="length" id="length" min="1" max="1000" step="1" required>
+				<input type="submit" value="Download">
+			</form>
+		</main>
+		<footer>
+			<p>developed by <a href="https://github.com/umluizlima/" target="_blank" rel="noopener">umluizlima</a></p>
+			<p>available on <a href="https://github.com/umluizlima/rulers/" target="_blank" rel="noopener">Github</a></p>
+		</footer>
+
+		<script>
+			const lengthField = document.querySelector('#length');
+			document.getElementById("rulerForm").addEventListener("submit", function(event){
+			    event.preventDefault();
+					console.log('Submitou');
+					window.open(`https://dxf-ruler.herokuapp.com/${lengthField.value}`)
+			});
+		</script>
+  </body>
+</html>
