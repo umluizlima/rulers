@@ -1,50 +1,55 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-  <head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115283549-3"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+	<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115283549-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-		  gtag('config', 'UA-115283549-3');
-		</script>
+      gtag('config', 'UA-115283549-3');
+    </script>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<title>Rulers</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
 
-    <title>Rulers</title>
-    <meta name="author" content="Luiz Lima">
-    <meta name="description" content="Get the file to fabricate your own ruler!">
+		<!-- Header -->
+			<header id="header">
+				<h1>Rulers</h1>
+				<p>Generate DXF files for laser cutting and engraving rulers.</p>
+			</header>
 
-    <link rel="icon" href="./images/icons/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/normalize.min.css">
-    <link rel="stylesheet" href="./css/main.css">
-  </head>
-  <body>
-		<header>
-			<h1>Rulers</h1>
-			<p>Generate DXF files for laser cutting and engraving rulers.</p>
-		</header>
-		<main>
-			<form id="rulerForm">
-				<input type="number" name="length" id="length" min="1" max="1000" step="1" required>
-				<input type="submit" value="Download">
+		<!-- Signup Form -->
+			<form id="ruler-form">
+				<input type="number" name="length" id="length" min="1" max="1000" step="1" placeholder="cm" required>
+				<input type="submit" value="Download" />
 			</form>
-		</main>
-		<footer>
-			<p>developed by <a href="https://github.com/umluizlima/" target="_blank" rel="noopener">umluizlima</a></p>
-			<p>available on <a href="https://github.com/umluizlima/rulers/" target="_blank" rel="noopener">Github</a></p>
-		</footer>
 
-		<script>
-			const lengthField = document.querySelector('#length');
-			document.getElementById("rulerForm").addEventListener("submit", function(event){
-			    event.preventDefault();
-					console.log('Submitou');
-					window.open(`https://dxf-ruler.herokuapp.com/${lengthField.value}`)
-			});
-		</script>
-  </body>
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://facebook.com/umluizlima" class="icon fa-facebook" target="_blank" rel="noopener"><span class="label">Twitter</span></a></li>
+					<li><a href="https://twitter.com/umluizlima" class="icon fa-twitter" target="_blank" rel="noopener"><span class="label">Twitter</span></a></li>
+					<li><a href="https://instagram.com/umluizlima" class="icon fa-instagram" target="_blank" rel="noopener"><span class="label">Instagram</span></a></li>
+					<li><a href="https://github.com/umluizlima/rulers" class="icon fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Luiz Lima.</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
